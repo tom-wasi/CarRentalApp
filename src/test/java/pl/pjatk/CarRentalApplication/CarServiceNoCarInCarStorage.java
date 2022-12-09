@@ -7,8 +7,7 @@ import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CarServiceStartDateIsAfterEndDate {
-
+class CarServiceNoCarInCarStorage {
     private CarService carService;
 
     @BeforeEach
@@ -20,7 +19,7 @@ public class CarServiceStartDateIsAfterEndDate {
 
     @Test
     void rentACarShouldReturnNull() {
-        var result = carService.rentACar("id001", LocalDate.of(2022, 10, 30), LocalDate.of(2022, 9, 30));
+        var result = carService.rentACar("id001", LocalDate.of(2022, 1, 1), LocalDate.of(2022, 2, 1));
 
         assertThat(result).isEqualTo(null);
     }
