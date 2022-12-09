@@ -35,7 +35,7 @@ public class CarService {
                 for (Car car : carList) {
                     if (car.getVin().equals(vin)) {
                         System.out.println("Car with vin: " + vin + " successfully rented");
-                        rentalList.add(new Rental(new User("dummyUser"), car));
+                        rentalList.add(new Rental(new User("karol"), car));
                         int between = (int) ChronoUnit.DAYS.between(startDate, endDate);
                         return new RentalInfo(300.00 * between * car.getCarSegment().getNumVal(), startDate, endDate);
                     }
